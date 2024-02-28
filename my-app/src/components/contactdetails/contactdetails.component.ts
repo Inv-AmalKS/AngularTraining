@@ -19,26 +19,23 @@ export class ContactdetailsComponent implements OnInit {
     place: string,
     message: string
   } = {
-      name: '',
-      email: '',
-      phone: '',
-      place: '',
-      message: ''
-    }
+    name: '',
+    email: '',
+    phone: '',
+    place: '',
+    message: ''
+  }
 
   constructor(private contactService: ContactService, private router: Router) { }
 
   ngOnInit(): void {
     this.contactDetails = this.contactService.getContactDetails();
+
     function checkEmpty(value: string): boolean {
-      if (value.length < 1) {
-        return false
-      }
-      return true
-
-
+     return value.length < 1
     }
-    if (!Object.values(this.contactDetails).some(checkEmpty)) {
+
+    if (Object.values(this.contactDetails).some(checkEmpty)) {
       this.router.navigate(['contact'])
     }
   }

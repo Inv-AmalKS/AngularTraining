@@ -6,12 +6,12 @@ import { HomeComponent } from '../components/home/home.component';
 import { ContactdetailsComponent } from '../components/contactdetails/contactdetails.component';
 
 export const routes: Routes = [
+
     { path: '', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'contact/details', component: ContactdetailsComponent },
     { path: '**', redirectTo: 'contact' }
-
-
+    
 ];
 
