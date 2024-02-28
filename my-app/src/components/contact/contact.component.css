@@ -1,0 +1,11 @@
+.submit-button {
+  display: flex;
+  justify-content: end;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  
+}
